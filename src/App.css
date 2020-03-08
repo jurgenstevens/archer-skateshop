@@ -29,3 +29,7 @@ ul {
 .nav-link {
   color: var(--mainWhite);
 }
+
+.navbar-brand {
+  height: 80px;
+}
