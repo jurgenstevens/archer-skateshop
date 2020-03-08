@@ -6,7 +6,7 @@
   --mainYellow: #ffa400;
 }
 body {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", sans-serif !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
@@ -31,5 +31,5 @@ ul {
 }
 
 .navbar-brand {
-  height: 80px;
+  height: 100px;
 }
