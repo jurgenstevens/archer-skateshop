@@ -7,7 +7,7 @@ export const storeProducts = [
     price: 50,
     company: "DGK",
     info: "8.25 x 31.75",
-    inCart: true,
+    inCart: false,
     count: 0,
     total: 0
   },

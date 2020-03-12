@@ -40,6 +40,15 @@ export default class Product extends Component {
               )}
             </button>
           </div>
+          {/* this will be the card footer */}
+          <div className="card-footer.d-flex.justify-content-between">
+            {/* name of the product goes here in the footer */}
+            <p className="align-self-center mb-0">{title}</p>
+            {/* this will be the price in the footer */}
+            <h5 className="text-blue font-italic mb-0">
+              <span className="mr-1">${price}</span>
+            </h5>
+          </div>
         </div>
       </ProductWrapper>
     );
