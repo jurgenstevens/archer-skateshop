@@ -1,3 +1,4 @@
+// automatically export  array of data for our skateshop!
 export const storeProducts = [
   {
     id: 1,
