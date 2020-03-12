@@ -27,7 +27,18 @@ export default class Product extends Component {
               onClick={() => {
                 console.log("Item has been added to the cart.");
               }}
-            ></button>
+            >
+              {/* checking the inCart value w/ ternary operator, change w bootstrap & html */}
+              {inCart ? (
+                <p className="text-capitalize mb-0" disabled>
+                  {" "}
+                  In Cart
+                </p>
+              ) : (
+                // cart icon for the else
+                <i className="fas fa-cart-plus" />
+              )}
+            </button>
           </div>
         </div>
       </ProductWrapper>
