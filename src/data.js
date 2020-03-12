@@ -35,7 +35,7 @@ export const storeProducts = [
   {
     id: 4,
     title: "Toy Machine Leo Romero Cauldron",
-    img: "./decks/toy-machine-romero",
+    img: "./decks/toy-machine-romero.jpg",
     price: 55,
     company: "Toy Machine",
     info:
