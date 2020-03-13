@@ -7,7 +7,7 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <ProductWrapper className="col-9-mx-auto col-md-6 col-lg-3 my-3">
+      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           {/* this div contains the image link, name, price and inCart status button */}
           <div
@@ -86,5 +86,26 @@ const ProductWrapper = styled.div`
   // image grows in scale by 1.2
   .img-container:hover .card-img-top {
     transform: scale(1.2);
+  }
+  // all of this is the css for the card button on the bottom right
+  .cart-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.2rem 0.4rem;
+    background: var(--lightBlue);
+    border: none;
+    color: var(--mainWhite);
+    font-size: 1.4rem;
+    border-radius: 0.5 0 0 0;
+    transform: translate(100%, 100%);
+    transition: all 0.5s linear;
+  }
+  .img-container:hover .cart-btn {
+    transform: translate(0, 0);
+  }
+  .cart-btn:hover {
+    color: var(--mainBlue);
+    cursor: pointer;
   }
 `;
