@@ -80,6 +80,9 @@ const ProductWrapper = styled.div`
     position: relative;
     overflow: hidden;
   }
+  .card-img-top {
+    transition: all 1s linear;
+  }
   // image grows in scale by 1.2
   .img-container:hover .card-img-top {
     transform: scale(1.2);
