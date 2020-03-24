@@ -11,36 +11,40 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           {/* this div contains the image link, name, price and inCart status button */}
-          <div
-            className="img-container p-5"
-            onClick={() => console.log("You've clicked me")}
-          >
-            {/* Image link to product details page */}
-            <Link to="/details">
-              <img src={img} alt="product" className="card-img-top" />
-            </Link>
-            {/* this is the button stating whether or not the item is in the cart */}
-            <button
-              className="cart-btn"
-              // if in cart is true then it's going to return true, if not, then false. State is false by defaults
-              disabled={inCart ? true : false}
-              // on click the console will state if item has been added to the cart
-              onClick={() => {
-                console.log("Item has been added to the cart.");
-              }}
-            >
-              {/* checking the inCart value w/ ternary operator, change w bootstrap & html */}
-              {inCart ? (
-                <p className="text-capitalize mb-0" disabled>
-                  {" "}
-                  In Cart
-                </p>
-              ) : (
-                // cart icon for the else
-                <i className="fas fa-cart-plus" />
-              )}
-            </button>
-          </div>
+          <ProductConsumer>
+            {value => (
+              <div
+                className="img-container p-5"
+                onClick={() => value.handleDetail(id)}
+              >
+                {/* Image link to product details page */}
+                <Link to="/details">
+                  <img src={img} alt="product" className="card-img-top" />
+                </Link>
+                {/* this is the button stating whether or not the item is in the cart */}
+                <button
+                  className="cart-btn"
+                  // if in cart is true then it's going to return true, if not, then false. State is false by defaults
+                  disabled={inCart ? true : false}
+                  // on click the console will state if item has been added to the cart
+                  onClick={() => {
+                    value.addToCart(id);
+                  }}
+                >
+                  {/* checking the inCart value w/ ternary operator, change w bootstrap & html */}
+                  {inCart ? (
+                    <p className="text-capitalize mb-0" disabled>
+                      {" "}
+                      In Cart
+                    </p>
+                  ) : (
+                    // cart icon for the else
+                    <i className="fas fa-cart-plus" />
+                  )}
+                </button>
+              </div>
+            )}
+          </ProductConsumer>
           {/* this will be the card footer */}
           <div className="card-footer d-flex justify-content-between">
             {/* name of the product goes here in the footer */}
