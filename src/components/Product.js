@@ -29,6 +29,7 @@ export default class Product extends Component {
                   // on click the console will state if item has been added to the cart
                   onClick={() => {
                     value.addToCart(id);
+                    value.openModal(id);
                   }}
                 >
                   {/* checking the inCart value w/ ternary operator, change w bootstrap & html */}
