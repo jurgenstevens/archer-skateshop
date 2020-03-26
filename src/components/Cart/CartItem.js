@@ -34,6 +34,9 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       {/*  */}
+      <div className="col--10 mc-auto col-lg-2">
+        <strong>item total: $ {total}</strong>
+      </div>
     </div>
   );
 }
