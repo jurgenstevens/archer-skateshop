@@ -97,7 +97,17 @@ class ProductProvider extends Component {
   };
 
   clearCart = id => {
-    console.log("The cart has been cleared");
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      // this will clear the products from being in the cart even after the
+      // page has been cleared
+      () => {
+        this.setProducts();
+        this.addTotals();
+      }
+    );
   };
   addTotals = () => {
     let subTotal = 0;
