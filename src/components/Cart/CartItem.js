@@ -24,8 +24,12 @@ export default function CartItem({ item, value }) {
         <div className="d-flex justify-content-center">
           {/* this will be the decrement button */}
           <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
-            {" "}
-            -{" "}
+            -
+          </span>
+          <span className="btn btn-black mx-1">{count}</span>
+          {/* this will be the increment button */}
+          <span className="btn btn-black mx-1" onClick={() => increment(id)}>
+            +
           </span>
         </div>
       </div>
