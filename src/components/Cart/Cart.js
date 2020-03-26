@@ -3,6 +3,7 @@ import Title from "../Title";
 import CartColumns from "./CartColumns";
 import EmptyCart from "./EmptyCart";
 import { ProductConsumer } from "../../context";
+import CartList from "./CartList";
 
 export default class Cart extends Component {
   render() {
@@ -19,6 +20,8 @@ export default class Cart extends Component {
                 <React.Fragment>
                   <Title name="your" title="cart" />
                   <CartColumns />
+                  {/* this will display the list of items in the cart */}
+                  <CartList value={value} />
                 </React.Fragment>
               );
               // or else just display the empty cart message
