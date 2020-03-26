@@ -5,7 +5,7 @@ export default function CartItem({ item, value }) {
   const { increment, decrement, removeItem } = value;
   return (
     <div className="row my-1 text-capitalize text-center">
-      <div className="col--10 mc-auto col-lg-2">
+      <div className="col-10 mx-auto col-lg-2">
         <img
           src={img}
           // this will limit the sie of the image to the specific size set below
@@ -14,11 +14,13 @@ export default function CartItem({ item, value }) {
           alt="product"
         />
       </div>
-      <div className="col--10 mc-auto col-lg-2">
-        <span className="d-lg-none"> product: {title}</span>
+      <div className="col-10 mx-auto col-lg-2">
+        <span className="d-lg-none">product:</span>
+        {title}
       </div>
-      <div className="col--10 mc-auto col-lg-2">
-        <span className="d-lg-none"> price: ${price}</span>
+      <div className="col-10 mx-auto col-lg-2">
+        <span className="d-lg-none"> price: </span>
+        {price}
       </div>
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div className="d-flex justify-content-center">
@@ -34,7 +36,12 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       {/*  */}
-      <div className="col--10 mc-auto col-lg-2">
+      <div className="col-10 mx-auto col-lg-2">
+        <div className="cart-icon" onClick={() => removeItem(id)}>
+          <i className="fas fa-trash"></i>
+        </div>
+      </div>
+      <div className="col-10 mx-auto col-lg-2">
         <strong>item total: $ {total}</strong>
       </div>
     </div>
