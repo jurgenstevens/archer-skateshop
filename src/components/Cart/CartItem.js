@@ -8,11 +8,16 @@ export default function CartItem({ item, value }) {
       <div className="col--10 mc-auto col-lg-2">
         <img
           src={img}
+          // this will limit the sie of the image to the specific size set below
           style={{ width: "5rem", height: "5rem" }}
           className="img-fluid"
           alt="product"
         />
       </div>
+      <div className="col--10 mc-auto col-lg-2">
+        <span className="d-lg-none"> product: {title}</span>
+      </div>
+      <div className="col--10 mc-auto col-lg-2"></div>
     </div>
   );
 }
