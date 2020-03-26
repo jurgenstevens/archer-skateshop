@@ -18,8 +18,18 @@ export default function CartItem({ item, value }) {
         <span className="d-lg-none"> product: {title}</span>
       </div>
       <div className="col--10 mc-auto col-lg-2">
-        <span className="d-lg-none"> price: {price}</span>
+        <span className="d-lg-none"> price: ${price}</span>
       </div>
+      <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
+        <div className="d-flex justify-content-center">
+          {/* this will be the decrement button */}
+          <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
+            {" "}
+            -{" "}
+          </span>
+        </div>
+      </div>
+      {/*  */}
     </div>
   );
 }
