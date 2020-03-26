@@ -17,7 +17,9 @@ export default function CartItem({ item, value }) {
       <div className="col--10 mc-auto col-lg-2">
         <span className="d-lg-none"> product: {title}</span>
       </div>
-      <div className="col--10 mc-auto col-lg-2"></div>
+      <div className="col--10 mc-auto col-lg-2">
+        <span className="d-lg-none"> price: {price}</span>
+      </div>
     </div>
   );
 }
