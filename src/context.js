@@ -93,7 +93,28 @@ class ProductProvider extends Component {
 
   // remove the item from the cart component
   removeItem = id => {
-    console.log("Item has been removed");
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+    // the item that matches this id is not going to be returned to the cart
+    tempCart = tempCart.filter(item => item.id !== id);
+
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removedProduct = tempProducts[index];
+    removedProduct.inCart = false;
+    removedProduct.count = 0;
+    removedProduct.total = 0;
+
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+          products: [...tempProducts]
+        };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
   };
 
   clearCart = id => {
