@@ -31,8 +31,11 @@ ul {
 }
 
 .navbar-brand {
-  height: 100px;
+  height: 200px;
+  position: relative;
+  left: 650px;
 }
+
 .btn-black {
   background: transparent;
   text-transform: capitalize;
