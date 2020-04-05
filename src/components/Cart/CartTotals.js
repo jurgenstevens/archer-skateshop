@@ -32,6 +32,7 @@ export default function CartTotals({ value, history }) {
               <span className="text-title">total :</span>
               <strong>$ {cartTotal}</strong>
             </h5>
+            {/* this is the paypal button and importing the following props from the Cart component */}
             <PayPalButton
               total={cartTotal}
               clearCart={clearCart}
