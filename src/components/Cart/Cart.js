@@ -11,7 +11,7 @@ export default class Cart extends Component {
     return (
       <section>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             // this is checking what's in the cart
             const { cart } = value;
             // if there is more than zero items in the cart..
@@ -23,7 +23,7 @@ export default class Cart extends Component {
                   <CartColumns />
                   {/* this will display the list of items in the cart */}
                   <CartList value={value} />
-                  <CartTotals value={value} />
+                  <CartTotals value={value} history={this.props.history} />
                 </React.Fragment>
               );
               // or else just display the empty cart message
