@@ -11,16 +11,8 @@ export default class Navbar extends Component {
         <Link to="/">
           <img src={logo} alt="store" className="navbar-brand" />
         </Link>
-        <Link to="/" className="nav-link col-md-4">
+        <Link to="/" className="nav-link">
           HOME
-        </Link>
-        <Link to="/cart" className="ml-auto col-md-4">
-          <ButtonContainer>
-            <span className="mr-2">
-              <i className="fas fa-cart-plus" />
-            </span>
-            my cart
-          </ButtonContainer>
         </Link>
         {/* this will be added later once we have more links to add besides one */}
         {/* <ul className="navbar-nav align-items-center">
@@ -30,6 +22,14 @@ export default class Navbar extends Component {
             </Link>
           </li>
         </ul> */}
+        <Link to="/cart" className="ml-auto">
+          <ButtonContainer>
+            <span className="mr-2">
+              <i className="fas fa-cart-plus" />
+            </span>
+            my cart
+          </ButtonContainer>
+        </Link>
       </NavWrapper>
     );
   }
