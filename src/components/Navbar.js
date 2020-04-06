@@ -13,11 +13,7 @@ export default class Navbar extends Component {
             HOME
           </Link>
           <Link to="/">
-            <img
-              src={logo}
-              alt="store"
-              className="navbar-brand col-md-4 text-center"
-            />
+            <img src={logo} alt="store" className="navbar-brand mx-auto" />
           </Link>
           <Link to="/cart" className="ml-auto col-md-4">
             <ButtonContainer>
