@@ -8,22 +8,20 @@ export default class Navbar extends Component {
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-        <div className="themed-grid-col">
-          <Link to="/" className="nav-link col-md-4">
-            HOME
-          </Link>
-          <Link to="/">
-            <img src={logo} alt="store" className="navbar-brand mx-auto" />
-          </Link>
-          <Link to="/cart" className="ml-auto col-md-4">
-            <ButtonContainer>
-              <span className="mr-2">
-                <i className="fas fa-cart-plus" />
-              </span>
-              my cart
-            </ButtonContainer>
-          </Link>
-        </div>
+        <Link to="/">
+          <img src={logo} alt="store" className="navbar-brand" />
+        </Link>
+        <Link to="/" className="nav-link col-md-4">
+          HOME
+        </Link>
+        <Link to="/cart" className="ml-auto col-md-4">
+          <ButtonContainer>
+            <span className="mr-2">
+              <i className="fas fa-cart-plus" />
+            </span>
+            my cart
+          </ButtonContainer>
+        </Link>
         {/* this will be added later once we have more links to add besides one */}
         {/* <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
